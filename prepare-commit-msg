@@ -1,0 +1,73 @@
+#!/usr/bin/env ruby
+
+# require preinstalled ruby system gem
+require 'open3'
+
+# config
+$verbose = true
+$verbose_prefix = "git hook: "
+
+# regex definitions
+regex_commit_issue_number = /^\s*\[[\-\w]*\d\]/
+regex_branch_issue_number = /[.]*\/([\-\w]*?\-\d+)/
+regex_git_commit_messages = /(Merge\sbranch\s\'|\#\sRebase\s|This\sreverts\scommit\s)/
+
+# colorize strings in console output
+class String
+	def error;   "\e[31m#{self}\e[0m" end
+	def success; "\e[32m#{self}\e[0m" end
+end
+
+# helper method
+def puts_verbose(message, error = false)
+	return if !$verbose
+	puts ((error) ? $verbose_prefix.error : $verbose_prefix.success) + message
+end
+
+# get the file name for commit message
+commit_file = ARGV[0]
+
+# read original commit message
+original_commit_message = File.read(commit_file)
+
+# check if original commit message contains issue number
+if original_commit_message.match(regex_commit_issue_number) != nil
+	puts_verbose("Current commit already contains an issue number.")
+	exit
+end
+
+# check if original commit message contains automatic git commits
+if original_commit_message.match(regex_git_commit_messages) != nil
+	puts_verbose("Current commit looks like an automatic commit by git.")
+	exit
+end
+
+# get the current branch name
+git_branch_command = "git rev-parse --abbrev-ref HEAD"
+branch_name, error, result = Open3.capture3(git_branch_command)
+
+# check if branch name failed
+if result.exitstatus != 0
+	puts_verbose("Unable to get git branch name.", true)
+	exit
+end
+
+# parse the current issue
+issue_number = branch_name[regex_branch_issue_number, 1]
+
+# check if issue number
+if !issue_number
+	puts_verbose("No issue number found in branch name.")
+	exit
+end
+
+# combine to new message
+new_commit_message = "[#{issue_number}] #{original_commit_message}"
+
+# write new commit messge to file
+File.open(commit_file, 'w') do |f|
+	f.write(new_commit_message)
+end
+
+# successful message
+puts_verbose("Automatically added issue number to commit message.")
