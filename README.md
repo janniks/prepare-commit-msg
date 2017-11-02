@@ -9,7 +9,7 @@ This git hook requires `ruby` to be installed _(no further external gems are nec
 ### Install Script
 To install simply run the following command. This requires `curl` to be installed.
 ```bash
-sh <(curl -s https://gist.githubusercontent.com/janniks/dd137d42b7316aaa83bf6c47f2d846e0/raw/install.sh)
+sh <(curl -s https://raw.githubusercontent.com/janniks/prepare-commit-msg/master/scripts/install.sh)
 ```
 
 ### Install Manually
