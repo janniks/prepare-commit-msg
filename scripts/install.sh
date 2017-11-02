@@ -5,7 +5,7 @@ echo "\nInstalling git hook...\n"
 
 # get git hook file
 echo " - Downloading git hook..."
-curl -s https://gist.githubusercontent.com/janniks/bc17587f75aec944edebb45a7d987447/raw > prepare-commit-msg
+curl -s https://raw.githubusercontent.com/janniks/prepare-commit-msg/master/scripts/prepare-commit-msg > prepare-commit-msg
 
 # move git hook to .git
 echo " - Moving git hook..."
