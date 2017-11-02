@@ -15,8 +15,7 @@ sh <(curl -s https://gist.githubusercontent.com/janniks/dd137d42b7316aaa83bf6c47
 ### Install Manually
 If you prefer to install manually you can walkthrough the following steps:
 
-1. Copy this script into your local git repository inside `.git/hooks`
-1. Rename it to `prepare-commit-msg` (Removing the suffix `.sample` activates the hook)
+1. Copy the `scripts/prepare-commit-msg` script into your local git repository inside `.git/hooks`
 1. Make sure the is script executable by running `chmod +x prepare-commit-msg`
 1. Enjoy! Test it by committing anything!
 
