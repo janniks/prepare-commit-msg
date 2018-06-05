@@ -22,19 +22,10 @@ If you prefer to install manually you can walkthrough the following steps:
 1. Make sure the is script executable by running `chmod +x prepare-commit-msg`
 1. Enjoy! Test it by committing anything!
 
-## Uninstall :confounded:
-If you're unhappy with this git hook:
-
-* Simply run `rm -rf .git/hooks/prepare-commit-msg` to uninstall locally
-* Or run `rm -rf ~/.git-template/hooks/prepare-commit-msg` to uninstall globally
-
-Please let me know what you didn't like!
-
 ## Usage :wrench:
 
-- If no issue number is found in the branch name, the commit message _will not be changed_.
-- If the commit message already contains an issue number, the commit message _will not be changed_.
-
+- If no issue number is found in the branch name, the commit message _will not be modified_.
+- If the commit message already contains an issue number, the commit message _will not be modified_.
 
 ### Examples
 
@@ -42,7 +33,7 @@ Please let me know what you didn't like!
 | ----------- | :--------------------: | :--------------------: |
 | `bugfix/ABC-012-add-initial-repo` | `Set up` | `[ABC-012] Set up` |
 | `feature/ABC-123-testing-something-awesome` | `Add files` | `[ABC-123] Add files` |
-| `feature/ABC-123-testing-something-awesome` | `[XYZ] Do something different` | |
+| `feature/ABC-123-testing-something-awesome` | `[XYZ] Do something different` | _not modified_ |
 
 ## FAQ & Problems
 
@@ -50,3 +41,11 @@ Please let me know what you didn't like!
   <summary>I already have a global git-template set up!</summary>
   Install manually and add the git hook file to your hooks directory in your existing git-template.
 </details>
+
+## Uninstall :confounded:
+If you're unhappy with this git hook:
+
+* Simply run `rm -rf .git/hooks/prepare-commit-msg` to uninstall locally
+* Or run `rm -rf ~/.git-template/hooks/prepare-commit-msg` to uninstall globally
+
+Please let me know what you didn't like!
