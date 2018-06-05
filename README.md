@@ -31,13 +31,22 @@ If you're unhappy with this git hook:
 Please let me know what you didn't like!
 
 ## Usage :wrench:
-On the current branch: `feature/ABC-123-testing-something-awesome`. The commit message `Adding files` will automatically be changed to `[ABC-123] Adding files.`
 
-On the current branch: `feature/ABC-123-testing-something-awesome`. The commit message `[XYZ] Doing something different` will NOT be changed.
+- If no issue number is found in the branch name, the commit message _will not be changed_.
+- If the commit message already contains an issue number, the commit message _will not be changed_.
+
+
+### Examples
+
+| Branch name | Entered commit message | Updated commit message |
+| ----------- | :--------------------: | :--------------------: |
+| `bugfix/ABC-012-add-initial-repo` | `Set up` | `[ABC-012] Set up` |
+| `feature/ABC-123-testing-something-awesome` | `Add files` | `[ABC-123] Add files` |
+| `feature/ABC-123-testing-something-awesome` | `[XYZ] Do something different` | |
 
 ## FAQ & Problems
 
 <details>
   <summary>I already have a global git-template set up!</summary>
-  > Install manually and add the git hook file to your hooks directory in your existing git-template.
+  Install manually and add the git hook file to your hooks directory in your existing git-template.
 </details>
