@@ -2,7 +2,7 @@
 This is a git hook for lazy people. :sleeping:
 
 ## Description :books:
-This hook automatically prepends a parsed issue number (from the current branch) to your commit messages on every commit. _(See [Usage](#usage) for examples)_
+This hook automatically prepends a parsed issue number (from the current branch) to your commit messages on every commit. _(See **Usage** for examples)_
 
 This git hook requires `ruby`  to be installed _(everything should be pre-installed by default on macOS and most *Nix systems)_.
 
@@ -37,5 +37,7 @@ On the current branch: `feature/ABC-123-testing-something-awesome`. The commit m
 
 ## FAQ & Problems
 
-**I already have a global git-template set up!**
-> Install manually and add the git hook file to your hooks directory in your existing git-template.
+<details>
+  <summary>I already have a global git-template set up!</summary>
+  Install manually and add the git hook file to your hooks directory in your existing git-template.
+</details>
