@@ -39,5 +39,5 @@ On the current branch: `feature/ABC-123-testing-something-awesome`. The commit m
 
 <details>
   <summary>I already have a global git-template set up!</summary>
-  Install manually and add the git hook file to your hooks directory in your existing git-template.
+  > Install manually and add the git hook file to your hooks directory in your existing git-template.
 </details>
