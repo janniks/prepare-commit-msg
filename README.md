@@ -4,7 +4,9 @@ This is a git hook for lazy people. :sleeping:
 ## Description :books:
 This git hook automatically prepends a parsed issue number (from the current branch) to your commit messages on every commit. _(See [Usage](#usage-wrench) for examples)_
 
-![Example](example.gif)
+<p align="center">
+  <img alt="Example usage" src="example.gif">
+</p>
 
 This git hook requires `ruby`  to be installed _(already pre-installed by default on macOS)_.
 
