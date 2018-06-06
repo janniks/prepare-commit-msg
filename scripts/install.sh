@@ -163,3 +163,7 @@ printf -- " - Requesting permission to execute git hook...\n"
 chmod a+x "$HOOK_FILE"
 
 printf -- "\n${GREEN}Successfully installed git hook!${RESET}\n\n"
+
+if [ "$OPTION_GLOBAL_TEMPLATE" = true ]; then
+	printf -- " - You will have to run ${BLUE}git init${RESET} in all existing git repositories...\n\n"
+fi
