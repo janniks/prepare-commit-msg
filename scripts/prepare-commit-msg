@@ -4,13 +4,13 @@
 require 'open3'
 
 # config
-$verbose = true
+$verbose = PLACEHOLDER_LOGGING_VERBOSE
 $verbose_prefix = "git hook: "
 
 # regex definitions
-regex_commit_issue_number = /^\s*\[[\-\w]*\d\]/
-regex_branch_issue_number = /[.]*\/([\-\w]*?\-\d+)/
-regex_git_commit_messages = /(Merge\sbranch\s\'|\#\sRebase\s|This\sreverts\scommit\s)/
+regex_commit_issue_number = PLACEHOLDER_REGEX_COMMIT_ISSUE_NUMBER
+regex_branch_issue_number = PLACEHOLDER_REGEX_BRANCH_ISSUE_NUMBER
+regex_git_commit_messages = PLACEHOLDER_REGEX_GIT_COMMIT_MESSAGES
 
 # colorize strings in console output
 class String
