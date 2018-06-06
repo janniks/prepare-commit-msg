@@ -2,7 +2,7 @@
 This is a git hook for lazy people. :sleeping:
 
 ## Description :books:
-This git hook automatically prepends a parsed issue number (from the current branch) to your commit messages on every commit. _(See **Usage** for examples)_
+This git hook automatically prepends a parsed issue number (from the current branch) to your commit messages on every commit. _(See [Usage](#usage-wrench) for examples)_
 
 ![Example](example.gif)
 
@@ -37,7 +37,7 @@ If you prefer to install manually you can walkthrough the following steps:
 
 | Branch name | Entered commit message | Updated commit message |
 | ----------- | :--------------------: | :--------------------: |
-| `bugfix/ABC-012-add-initial-repo` | `Set up repository` | `[ABC-012] Set up` |
+| `bugfix/ABC-012-add-initial-repo` | `Set up repo` | `[ABC-012] Set up repo` |
 | `feature/ABC-123-something-awesome` | `Add files` | `[ABC-123] Add files` |
 | `feature/ABC-123-something-awesome` | `[XYZ-123] Something different` | _not modified_ |
 
