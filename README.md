@@ -4,9 +4,9 @@ This is a git hook for lazy people. :sleeping:
 ## Description :books:
 This hook automatically prepends a parsed issue number (from the current branch) to your commit messages on every commit. _(See **Usage** for examples)_
 
-This git hook requires `ruby`  to be installed _(everything should be pre-installed by default on macOS and most *Nix systems)_.
-
 ![Example](example.gif)
+
+This git hook requires `ruby`  to be installed _(everything should be pre-installed by default on macOS and most *Nix systems)_.
 
 ## Install :rocket:
 ### Install Script
