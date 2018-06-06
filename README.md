@@ -6,6 +6,8 @@ This hook automatically prepends a parsed issue number (from the current branch)
 
 This git hook requires `ruby`  to be installed _(everything should be pre-installed by default on macOS and most *Nix systems)_.
 
+![Example](example.gif)
+
 ## Install :rocket:
 ### Install Script
 To install simply run the following command. This requires `curl` to be installed.
