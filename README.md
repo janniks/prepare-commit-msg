@@ -63,9 +63,8 @@ These are the default regular expressions that are used by the script on install
 | Detects issue number | Does not detect issue number |
 | :------------------: | :--------------------------: |
 | `[ABC-123] Test message` | `Test message` |
-| `[XYZ 312] Message test` | `[ABC] Testing stuff` |
+| `[XYZ-312] Message test` | `[ABC] Testing stuff` |
 | ` [XYZ-ABCD-321] Awesome sauce` | ` [Add ABC-123 files]` |
-| `Add multiple dimensions [AA-012]` | |
 
 #### Detecting automated commits by git
 `/(Merge\sbranch\s\'|\#\sRebase\s|This\sreverts\scommit\s)/`
