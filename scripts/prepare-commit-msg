@@ -62,7 +62,7 @@ if !issue_number
 end
 
 # combine to new message
-new_commit_message = "[#{issue_number}] #{original_commit_message}"
+new_commit_message = "[#{issue_number}] #{original_commit_message.gsub(/(\s[[:punct:]])+$/, '')}"
 
 # write new commit messge to file
 File.open(commit_file, 'w') do |f|
