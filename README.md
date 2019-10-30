@@ -23,10 +23,10 @@ sh <(curl -s https://raw.githubusercontent.com/janniks/prepare-commit-msg/master
 > `find . -name .git -type d -prune -exec sh -c 'git --git-dir "{}" init' \;`
 
 ### Install Manually
-If you prefer to install manually you can walkthrough the following steps:
+If you prefer to install manually you can walk through the following steps:
 
 1. Copy the `scripts/prepare-commit-msg` script into your local git repository inside `.git/hooks`
-1. Edit the placeholders in the beginning of the script
+1. Edit the placeholders at the beginning of the script
 1. Make sure the is script executable by running `chmod +x prepare-commit-msg`
 1. Enjoy! Test it by committing anything!
 
@@ -80,7 +80,7 @@ You can use tools like [Regex101](https://regex101.com/) to tweak and test these
 ## FAQ & Problems
 
 <details>
-  <summary>I already have a global git-template set up!</summary>
+  <summary>I already have a global git-template!</summary>
   Install manually and add the git hook file to your hooks directory in your existing git-template.
 </details>
 
