@@ -50,7 +50,7 @@ This git hooks will look at the current branch (e.g. `type/ABC-123-branch-name`)
 These are the default regular expressions that are used by the script on install. They can easily be changed during install using the provided script or manually tweaked.
 
 #### Parsing issue numbers from current branch name
-`/[.]*\/([\-\w]*?\-\d+)/`
+[`/[.]*\/([\-\w]*?\-\d+)/`](https://regex101.com/r/gf9GMF/1)
 
 | Detects issue number | Does not detect issue number |
 | :------------------: | :--------------------------: |
@@ -58,7 +58,7 @@ These are the default regular expressions that are used by the script on install
 | `Improvement/XYZ-ABC-321-Crazy-Name` | `simple-branch-name` |
 
 #### Checking commit messages for existing issue numbers
-`/^\s*\[[\-\w]*\d\]/`
+[`/^\s*\[[\-\w]*\d\]/`](https://regex101.com/r/nZr8LF/1)
 
 | Detects issue number | Does not detect issue number |
 | :------------------: | :--------------------------: |
@@ -67,7 +67,7 @@ These are the default regular expressions that are used by the script on install
 | ` [XYZ-ABCD-321] Awesome sauce` | ` [Add ABC-123 files]` |
 
 #### Detecting automated commits by git
-`/(Merge\sbranch\s\'|\#\sRebase\s|This\sreverts\scommit\s)/`
+[`/(Merge\sbranch\s\'|\#\sRebase\s|This\sreverts\scommit\s)/`](https://regex101.com/r/Cs2Qag/1)
 
 | Ignores following commits |
 | :-------------------: |
