@@ -64,7 +64,7 @@ end
 # combine to new message
 new_commit_message = "[#{issue_number.upcase}] #{original_commit_message.gsub(/(\s[[:punct:]])+$/, '')}"
 
-# write new commit messge to file
+# write new commit message to file
 File.open(commit_file, 'w') do |f|
 	f.write(new_commit_message)
 end
